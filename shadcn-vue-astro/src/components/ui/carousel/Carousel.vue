@@ -39,6 +39,6 @@ function onKeyDown(event: KeyboardEvent) {
     tabindex="0"
     @keydown="onKeyDown"
   >
-    <slot v-bind="carouselArgs" />
+    <slot v-bind="carouselArgs"></slot>
   </div>
 </template>

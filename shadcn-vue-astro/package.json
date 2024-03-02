@@ -1,5 +1,5 @@
 {
-  "name": "bitcoin",
+  "name": "vue-template-shadcn-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install",
+    "prepare": "husky install || exit 0",
     "lint-staged": "lint-staged",
     "commit": "cz",
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
@@ -39,6 +39,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "lucide-vue-next": "^0.344.0",
+    "pinia": "^2.1.7",
     "radix-vue": "^1.4.9",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
@@ -62,12 +63,14 @@
     }
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vitest/coverage-v8": "^1.2.2",
     "@vitest/ui": "^1.2.2",
     "@vue/test-utils": "^2.4.4",
     "cypress": "^13.6.6",
-    "jsdom": "^22.1.0",
+    "jsdom": "^24.0.0",
     "vitest": "^1.2.2"
   }
 }
