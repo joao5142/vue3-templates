@@ -1,5 +1,5 @@
 import { USER_COLLECTION, USER_PERFIL_THEME_COLLECTION, USER_THEME_COLLECTION } from '@/storage'
-import { PosibleThemesTypes, PerfilThemeTypes } from '~/theme'
+import { type PosibleThemesTypes, type PerfilThemeTypes } from '@/theme/index'
 
 const collectionStoredName = `${USER_COLLECTION}`
 

@@ -1,5 +1,4 @@
 import { USER_COLLECTION, USER_PERFIL_THEME_COLLECTION, USER_THEME_COLLECTION } from '@/storage'
-import { PosibleThemesTypes, PerfilThemeTypes } from '~/theme'
 
 const collectionStoredName = `${USER_COLLECTION}`
 
@@ -21,7 +20,7 @@ export function getStoredUser() {
   }
 }
 
-export function getUserTheme(): PosibleThemesTypes {
+export function getUserTheme() {
   try {
     const theme = JSON.parse(localStorage.getItem(USER_THEME_COLLECTION) || '')
 
@@ -34,13 +33,13 @@ export function getUserTheme(): PosibleThemesTypes {
   }
 }
 
-export function setUserTheme(value: PosibleThemesTypes) {
+export function setUserTheme(value: unknown) {
   const theme = localStorage.setItem(USER_THEME_COLLECTION, JSON.stringify(value))
 
   return theme
 }
 
-export function getUserPerfilTheme(): PerfilThemeTypes | '' {
+export function getUserPerfilTheme(): string {
   const theme = JSON.parse(localStorage.getItem(USER_PERFIL_THEME_COLLECTION)!)
 
   if (!theme) {
@@ -50,7 +49,7 @@ export function getUserPerfilTheme(): PerfilThemeTypes | '' {
   return theme
 }
 
-export function setUserPerfilTheme(value: PerfilThemeTypes) {
+export function setUserPerfilTheme(value: unknown) {
   const theme = localStorage.setItem(USER_PERFIL_THEME_COLLECTION, JSON.stringify(value))
 
   return theme
