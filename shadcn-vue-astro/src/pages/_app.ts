@@ -1,4 +1,5 @@
 import { createPinia } from 'pinia'
+import '@/styles/globals.css'
 
 import type { App } from 'vue'
 

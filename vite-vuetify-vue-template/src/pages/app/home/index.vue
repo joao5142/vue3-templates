@@ -1,15 +1,12 @@
 <template>
-  <div>
-    <Text as="strong" class="block" size="xl">Teste count store</Text>
-    <Button variant="secondary" @click="decrement">decrement</Button>
+  <div class="d-flex align-center">
+    <v-btn @click="decrement">decrement</v-btn>
     <span class="mx-5">{{ count }}</span>
-    <Button variant="secondary" @click="increment">add</Button>
+    <v-btn @click="increment">add</v-btn>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import { Text } from '@/components/ui/text'
 import { useCountStore } from '@/store/countStore'
 import { storeToRefs } from 'pinia'
 

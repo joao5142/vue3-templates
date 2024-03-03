@@ -1,0 +1,81 @@
+@use './_variables.scss' as variables;
+
+// @use 'vuetify' with (
+
+// );
+
+.v-application,
+*,
+#app,
+html,
+body {
+  font-family: 'Inter', 'sans-serif' !important;
+}
+.v-application {
+  font-family: 'Inter', 'sans-serif' !important;
+  .title {
+    // To pin point specific classes of some components
+    font-family: 'Inter', 'sans-serif' !important;
+  }
+}
+
+// TEXTFIELDS
+
+//text field outlined
+.v-field--variant-outlined .v-field__outline {
+  color: rgb(var(--v-theme-text-300)) !important;
+  border-radius: 8px !important;
+}
+
+// outlined focused
+.v-field--variant-outlined.v-field--focused .v-field__outline {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+
+//solo
+.v-field.v-field--variant-solo {
+  box-shadow: none !important;
+  color: rgb(var(--v-theme-text-900)) !important;
+
+  border: 1px solid rgb(var(--v-theme-gray-100));
+  border-radius: 8px !important;
+}
+
+.v-field__field.v-field.v-field--variant-solo input,
+.v-field__field.v-field--variant-outlined input,
+.v-text-field .v-field--no-label input {
+  color: rgb(var(--v-theme-text-900)) !important;
+
+  border-radius: 8px !important;
+}
+
+//solo background theme
+.v-field__field.v-field.v-field--variant-solo input,
+.v-field--variant-solo input {
+  background: rgb(var(--v-theme-card)) !important;
+}
+
+.v-list {
+  border-radius: variables.$border-radius !important;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+//input details
+.v-input__details {
+  padding-left: 0px !important;
+}
+.v-messages {
+  opacity: 0.8 !important;
+}
+.hint--orange .v-input__details {
+  color: rgb(var(--v-theme-red-300)) !important;
+}
+
+.v-navigation-drawer {
+  box-shadow: none !important;
+}
+.v-navigation-drawer__scrim {
+  position: fixed !important;
+
+  opacity: 0.04 !important;
+}

@@ -8,6 +8,8 @@ export default defineConfig({
     vue({
       appEntrypoint: '/src/pages/_app',
     }),
-    tailwind(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
   ],
 })
