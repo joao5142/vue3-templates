@@ -52,8 +52,6 @@
     "nuxt": "^3.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0",
-    "sass-loader": "^13.3.2",
     "shadcn-nuxt": "^0.9.0",
     "storybook": "^7.5.2",
     "unplugin-auto-import": "^0.17.5",

@@ -9,7 +9,7 @@ import LoadingGif from '@/assets/gifs/loading.gif'
 const { isLoading } = useLoadingIndicator()
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .loading {
   position: fixed;
   inset: 0;

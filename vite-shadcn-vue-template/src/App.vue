@@ -8,7 +8,7 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .slide-enter-active,
 .slide-leave-active {
   transform: translateX(100vw);

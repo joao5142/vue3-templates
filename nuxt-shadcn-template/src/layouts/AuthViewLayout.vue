@@ -11,4 +11,4 @@
 import AppLoading from '@/components/ui/loading/AppLoading.vue'
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped></style>

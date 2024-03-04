@@ -25,7 +25,7 @@ function handleUpdateRail(value: any) {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .background,
 .v-main {
   background: rgb(var(--v-theme-background)) !important;
