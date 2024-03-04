@@ -1,4 +1,3 @@
-import { useTheme } from 'vuetify'
 import { getUserTheme, setUserTheme } from '../storage/modules/user'
 import { ThemeTypes, PosibleThemesTypes } from '@/theme'
 
