@@ -11,7 +11,7 @@
 import { Button } from '@/components/ui/button'
 import { Text } from '@/components/ui/text'
 
-import { useCountStore } from '@/store/countStore'
+import { useCountStore } from '@/stores/countStore'
 import { storeToRefs } from 'pinia'
 
 const store = useCountStore()

@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - apt-get update -y && apt-get install -y make apt-transport-https
+      - apt-get update -y && apt-get install -y ca-certificates
+        fonts-liberation lsb-release xdg-utils wget
+      - apt-get install -y awscli
+      - apt-get install -y jq
+      - zip -rq artifact.zip *
+      - npm install
+  build:
+    commands:
+      - |
+        npm run generate;
+  post_build:
+    commands:
+      - if [ $CODEBUILD_BUILD_SUCCEEDING = 0 ]; then exit 1; fi
+      - |
+        aws s3 sync .output/public/ s3://$BUCKET_APPLICATION;
+        aws cloudfront create-invalidation --distribution-id $CLOUD_FRONT_ID --paths "/*"

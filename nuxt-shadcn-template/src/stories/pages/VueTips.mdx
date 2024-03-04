@@ -1,0 +1,44 @@
+import { Meta, Source } from '@storybook/blocks'
+
+<Meta title="VueTips" />
+
+<h1> Vue Tips </h1>
+
+<h3 className="sb-subtitle">Watch and Watch Effect</h3>
+
+<Source
+  language='typescript'
+  code={`
+   //declare a reactive object value
+
+    const currentQuestion=ref({
+      id:1
+    })
+
+    // similar to computed props , all things inside are dependences and are observed
+    watchEffect(() => {
+      console.log(currentQuestion.id)
+    })
+
+    watch(
+    () => currentQuestion.id, // to observe some references that is not a object ,its required call a callback function (getter function)
+        (value) => {
+          console.log('valor com watch normal', value)
+        },
+        {
+            deep: false // default false value ,
+            immediate:
+            false // default false , set true if you wanted to execute initialy in created setup
+        }
+    )
+
+`}
+/>
+
+<style>
+  {`
+    .sb-subtitle{
+        margin-top: 40px;
+    }
+  `}
+</style>

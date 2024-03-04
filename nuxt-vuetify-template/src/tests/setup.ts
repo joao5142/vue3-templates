@@ -1,0 +1,1 @@
+import './utils/vuetify'

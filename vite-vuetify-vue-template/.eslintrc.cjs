@@ -13,6 +13,8 @@ module.exports = {
     {
       files: ['*.vue'],
       rules: {
+        'vue/component-tags-order': ['error', { order: ['template', 'script', 'style'] }],
+
         'vue/component-name-in-template-casing': [
           'error',
           'kebab-case',

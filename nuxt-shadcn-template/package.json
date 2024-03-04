@@ -1,0 +1,112 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lint:fix": "prettier --write --list-different . && npm run lint:js --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "api-server": "json-server --watch db.json --routes src/lib/json-server/routes.json --port=3001",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@nuxt/devtools": "^1.0.8",
+    "@nuxt/test-utils": "^3.11.0",
+    "@nuxtjs/i18n": "^8.0.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@nuxtjs/web-vitals": "^0.2.6",
+    "@storybook/addon-essentials": "^7.5.2",
+    "@storybook/addon-interactions": "^7.5.2",
+    "@storybook/addon-links": "^7.5.2",
+    "@storybook/blocks": "^7.5.2",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/vue3": "^7.5.2",
+    "@storybook/vue3-vite": "^7.5.2",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vitest/coverage-v8": "^1.2.2",
+    "@vitest/ui": "^1.2.2",
+    "commitizen": "^4.3.0",
+    "cypress": "^13.6.6",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-vue": "^9.21.1",
+    "jsdom": "^22.1.0",
+    "lint-staged": "^14.0.1",
+    "nuxt": "^3.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "shadcn-nuxt": "^0.9.0",
+    "storybook": "^7.5.2",
+    "unplugin-auto-import": "^0.17.5",
+    "vitest": "^1.2.2",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@phosphor-icons/vue": "^2.1.6",
+    "@pinia/nuxt": "^0.4.11",
+    "@typescript-eslint/parser": "^6.7.5",
+    "@vue/test-utils": "^2.4.4",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.5.1",
+    "chart.js": "^4.4.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "date-fns": "^2.30.0",
+    "embla-carousel": "^8.0.0",
+    "embla-carousel-vue": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "json-server": "^0.17.4",
+    "lint-staged": "^14.0.1",
+    "lucide-vue-next": "^0.344.0",
+    "maska": "^2.1.10",
+    "pinia": "^2.1.6",
+    "polished": "^4.2.2",
+    "prettier": "^3.0.3",
+    "radix-vue": "^1.4.9",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.2.2",
+    "unplugin-vue-components": "^0.26.0",
+    "vue-chartjs": "^5.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged",
+      "commit-msg": "npx --no-install commitlint --edit"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "npm run lint:fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

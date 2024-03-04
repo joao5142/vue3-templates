@@ -1,0 +1,63 @@
+import { Meta, Source } from '@storybook/blocks'
+
+<Meta title="CodeTips" />
+
+<h1> Code Tips </h1>
+
+<h3 className="sb-subtitle">Clean code</h3>
+<h4>Variables and function names</h4>
+
+<Source
+  language='typescript'
+  code={`
+
+     //avoid using  abbreviated words  to define variable names
+
+    //wrong
+    users.map(u=>{
+      ...
+    })
+
+    // instead you can use this
+    users.map(user=>{
+    ...
+    })
+
+//use declarative and semantics names to your variables and functions (again)
+
+     //wrong
+    const data = users.filter(user=>user.isAdmin)
+
+    function getYear(year:number){
+       const currentYear= new Date().getFullYear()
+       return currentYear - year
+    }
+
+    // instead you can use this
+    const filteredAdminUserList = users.filter(user=>user.isAdmin)
+
+    function calculateDifferenceInYearsByCurrentYear(year:number){
+       const currentYear = new Date().getFullYear()
+       return currentYear - year
+    }
+
+//use some conventions to prefix boolean variable names like : is, has
+
+    const isUserLoggedIn = true
+    const isCompleteButtonDisabled = true
+
+    //the reasson for this is that your code becomes easier to read
+    if(isUserLoggedIn) // if user is logged in
+
+    //another way to do this is written variables names asking something
+
+`}
+/>
+
+<style>
+  {`
+    .sb-subtitle{
+        margin-top: 40px;
+    }
+  `}
+</style>

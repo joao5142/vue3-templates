@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import LoadingGif from '@/assets/loading.gif'
-import { useLoadingStore } from '@/store/loadingStore'
+import { useLoadingStore } from '@/stores/loadingStore'
 import { storeToRefs } from 'pinia'
 
 const store = useLoadingStore()

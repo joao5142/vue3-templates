@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useLoadingStore } from '@/store/loadingStore'
+import { useLoadingStore } from '@/stores/loadingStore'
 import { AppError } from '@/utils/erros/AppError'
 import axios, { AxiosRequestConfig, AxiosRequestHeaders, AxiosResponse } from 'axios'
 // import { HttpsProxyAgent } from 'https-proxy-agent'

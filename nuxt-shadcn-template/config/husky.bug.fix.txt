@@ -1,0 +1,1 @@
+Windows - Added C:\Program Files\Git\bin to Path for both variable types: User and System, and it worked.
