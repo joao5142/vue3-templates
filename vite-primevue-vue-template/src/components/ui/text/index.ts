@@ -1,6 +1,6 @@
 import { type VariantProps, cva } from 'class-variance-authority'
 
-export { default as Text } from './Text.vue'
+export { default as AppText } from './AppText.vue'
 
 export const textVariants = cva('', {
   variants: {

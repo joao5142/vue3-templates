@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { Text } from '@/components/ui/text'
+import { AppText } from '@/components/ui/text'
 
-describe('Text', () => {
+describe('AppText', () => {
   it('should render correctly', () => {
-    const wrapper = mount(Text, {
+    const wrapper = mount(AppText, {
       slots: {
         default: 'Teste',
       },
@@ -13,7 +13,7 @@ describe('Text', () => {
   })
 
   it('should add size class correctly', () => {
-    const wrapper = mount(Text, {
+    const wrapper = mount(AppText, {
       slots: {
         default: 'Teste',
       },

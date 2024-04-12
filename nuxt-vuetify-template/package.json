@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "template-nuxt-vuetify",
   "private": true,
   "type": "module",
   "scripts": {
